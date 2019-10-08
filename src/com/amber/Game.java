@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Game {
     private int[] arrayOfNums;
 
-
     public int readIntegers(int count){
         int[] numArr = new int[count];
         Scanner scan = new Scanner(System.in);
