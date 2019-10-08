@@ -4,21 +4,24 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Game {
+    private int[] arrayOfNums;
 
 
-
-    public String readIntegers(int count){
+    public int readIntegers(int count){
         int[] numArr = new int[count];
         Scanner scan = new Scanner(System.in);
         for(int i=0; i < numArr.length; i++){
             System.out.print("Enter int at " + i + ": ");
             numArr[i] = scan.nextInt();
         }
-        return Arrays.toString(numArr);
+        this.arrayOfNums = numArr;
+        System.out.println(Arrays.toString(arrayOfNums));
+        return findMin();
     }
 
-    public int findMin(int[] arr){
-       Arrays.sort(arr);
-        return arr[0];
+    public int findMin(){
+       Arrays.sort(arrayOfNums);
+        System.out.println("The lowest number in this array is " + arrayOfNums[0]);
+        return arrayOfNums[0];
     }
 }
